@@ -1,0 +1,31 @@
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 100vw;
+    gap: 150px;
+}
+
+.content h1, .content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+.image-container img {
+    width: 500px
+}

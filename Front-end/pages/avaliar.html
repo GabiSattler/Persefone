@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Método</title>
+    <link rel="stylesheet" href="../css/avaliar.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="../imagens/logo.png" alt="Logo Perséfone" class="footer-logo">
+        </a>
+        <div class="usuario-name">
+            <span>Olá, <span id="nomeUsuario">nome do usuário!</span></span>
+        </div>
+    
+        <!-- Menu Condicional - Exibido apenas para usuário comum -->
+        <nav class="menu-user" id="userMenu" style="display: none;">
+            <ul>
+                <li><a href="painelMetodos.html">Ver Métodos</a></li>
+                <li><a href="minhas_avaliacoes.html">Ver Minhas Avaliações</a></li>
+            </ul>
+        </nav>
+    
+        <div class="nav-icons">
+            <a href="../index.html" onclick="localStorage.removeItem('nomeUsuario')">
+                <img src="../imagens/sair.png" alt="Sair">
+            </a>
+            <a href="perfil.html">
+                <img src="../imagens/perfil.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <p id="methodType"></p>
+        <img src="../imagens/avalIcon.png" alt="Icone de Avaliação" class="avalicone"/>
+        <div id="userActions" style="display: block;">
+            <div class="rating-container">
+                <h2>Avalie este método</h2>
+                <div class="star-rating">
+                    <span data-value="1">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="5">&#9733;</span>
+                </div>
+                <div class="comentarios">
+                    <textarea placeholder="Digite aqui seu comentário" cols="50" rows="10">
+                    </textarea>
+                </div>
+                <button id="submitRating">Enviar Avaliação</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/metodo.js"></script>
+    <script src="../javascript/avaliacoes.js"></script>
+</body>
+</html>

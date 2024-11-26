@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/homeadmin.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="../imagens/logo.png" alt="Logo Perséfone" class="footer-logo">
+        </a>
+        <div class="usuario-name">
+            <span>Olá, <span id="nomeUsuario">nome do usuário!</span></span>
+        </div>
+    
+        <!-- Menu Condicional - Exibido apenas para usuário comum -->
+        <nav class="menu-user" id="userMenu" style="display: none;">
+            <ul>
+                <li><a href="painelMetodos.html">Ver Métodos</a></li>
+                <li><a href="minhas_avaliacoes.html">Ver Minhas Avaliações</a></li>
+            </ul>
+        </nav>
+    
+        <div class="nav-icons">
+            <a href="../index.html" onclick="localStorage.removeItem('nomeUsuario')">
+                <img src="../imagens/sair.png" alt="Sair">
+            </a>
+            <a href="perfil.html">
+                <img src="../imagens/perfil.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="info">
+            <h2>Painel do Administrador</h2>
+        
+            <!-- Botão para adicionar novo método -->
+            <button id="addMethodButton">Adicionar Novo Método</button>
+        </section>
+        <!-- Seção para exibir métodos cadastrados -->
+        <section id="methodsList"></section>
+    </main>
+
+    <!-- Modal de Cadastro -->
+    <div id="methodModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Adicionar Novo Método</h2>
+            <form id="methodForm">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <!-- Checkbox para indicar se o método é fornecido pelo SUS -->
+                <label for="fornecidoSus">Marque se o método for fornecido pelo sus:</label>
+                <input type="checkbox" id="fornecidoSus" name="fornecidoSus">
+
+                <label for="avatar">Avatar:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*" >
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/admin.js"></script> 
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="../imagens/logo.png" alt="Logo Perséfone" class="footer-logo">
+        </a>
+        <div class="usuario-name">
+            <span>Olá, <span id="nomeUsuario">nome do usuário!</span></span>
+        </div>
+    
+        <!-- Menu Condicional - Exibido apenas para usuário comum -->
+        <nav class="menu-user" id="userMenu" style="display: none;">
+            <ul>
+                <li><a href="./painelMetodos.html">Ver Métodos</a></li>
+                <li><a href="./minhas_avaliacoes.html">Ver Minhas Avaliações</a></li>
+            </ul>
+        </nav>
+    
+        <div class="nav-icons">
+            <a href="../index.html" onclick="localStorage.removeItem('nomeUsuario')">
+                <img src="../imagens/sair.png" alt="Sair">
+            </a>
+            <a href="perfil.html">
+                <img src="../imagens/perfil.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Bem vinda</h1>
+            <p>Este projeto tem como objetivo oferecer a todas as mulheres, independentemente de status social ou cor, um espaço seguro e acessível com informações sobre métodos contraceptivos. Para garantir informações claras e úteis, nossa plataforma apresenta apenas conteúdo baseado em fontes confiáveis, como livros, artigos científicos e dados governamentais. Desenvolvido com tecnologia moderna e fácil de usar, nosso site fornece informações essenciais para ajudar adolescentes e mulheres a cuidarem de sua saúde reprodutiva e reduzirem o risco de gravidezes indesejadas. Aqui, você encontrará apoio e conhecimento para tomar decisões informadas sobre seu corpo.</p>
+        
+            <h2>E o SUS?</h2>
+            <p>O Sistema Único de Saúde (SUS) desempenha um papel crucial no planejamento familiar no Brasil, garantindo acesso a métodos contraceptivos e fornecendo orientação sobre saúde reprodutiva. Ele oferece diversos métodos gratuitos, como pílulas anticoncepcionais, preservativos, dispositivos intrauterinos (DIU), injeções contraceptivas e muito mais, disponíveis nas unidades de saúde. Além disso, o SUS apoia campanhas de conscientização e oferece assistência de profissionais de saúde, como médicos e enfermeiros, para educar as pessoas sobre métodos apropriados e ajudá-las a escolher a opção que melhor se adapta às suas necessidades e objetivos. Isso ajuda a reduzir a gravidez indesejada e dá às pessoas mais autonomia ao tomar decisões sobre sua saúde sexual e reprodutiva.</p>
+        
+        </section>
+
+        <section class="image-container">
+            <img src="../imagens/pilulas.png" alt="Métodos Contraceptivos">
+        </section>
+    </main>
+
+    <!-- Script para exibir o nome do usuário -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nomeUsuario = localStorage.getItem('nomeUsuario');
+            if (nomeUsuario) {
+                document.getElementById('nomeUsuario').textContent = nomeUsuario;
+            }
+        });
+    </script>
+    <script src="../javascript/header.js"></script>
+</body>
+</html>
+

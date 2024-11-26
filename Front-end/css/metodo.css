@@ -1,0 +1,95 @@
+/*Estilização do conteúdo principal*/
+main{
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+#sus{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+p#sus img{
+    margin-left: 8px;
+    width: 25px;
+}
+
+#methodDescription {
+    text-align: justify;
+    line-height: 30px;
+}
+p#methodType{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+img#methodImage {
+    width: 300px;
+    border-radius: 40px;
+}
+
+/*estilo para estrelas
+.rating-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.rating-container h2{
+    font-size: 20px;
+}
+
+.star-rating {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.star-rating span {
+    color: #ccc; /* cor das estrelas "desmarcadas" 
+}
+
+.star-rating .selected,
+.star-rating span:hover,
+.star-rating span:hover ~ span {
+    color: #FFD700; /* cor das estrelas selecionadas 
+}*/
+
+.static-stars {
+    display: flex;
+    justify-content: center;
+    color: #FFD700; /* Cor das estrelas */
+    font-size: 1.5rem; /* Tamanho das estrelas */
+    cursor: default; /* Remove cursor de interação */
+    pointer-events: none; /* Desativa qualquer interação */
+    margin-top: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #c2185b;
+}
+
+.buttonsComment{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between ;
+}
+
+

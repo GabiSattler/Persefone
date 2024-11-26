@@ -1,0 +1,77 @@
+/* CSS PARA O HEADER DE TODAS AS PÁGINAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Fundo azul claro */
+    color: #333;
+    max-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #e0f7fa;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+.usuario-name{
+    font-size: 18px;
+    color:#333;
+}
+
+.nav-icons a {
+    margin-left: 15px;
+}
+
+.nav-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu-user {
+    margin-left: 20px;
+}
+
+.menu-user ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-user ul li {
+    font-size: 16px;
+}
+
+.menu-user ul li a {
+    text-decoration: none;
+    background-color: #f48fb1;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-user ul li a:hover {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 50px;
+}

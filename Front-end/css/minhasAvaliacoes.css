@@ -1,0 +1,107 @@
+h2{
+    text-align: center;
+    margin-top: 60px;
+    color: #c2185b;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.edit-icon,.delete-icon{
+    width: 25px;
+    cursor: pointer;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.review-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+}
+
+.review-card .stars {
+    color: #FFD700;
+}
+
+.review-card .actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.modal-content h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.star-rating{
+    font-size: 25px;
+    color:#FFD700;
+    margin: 15px 0;
+}
+
+#editComment{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #f48fb1;
+    background-color: #f8bbd0;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#saveEdit {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+        
+#saveEdit:hover {
+    background-color: #c2185b;
+}

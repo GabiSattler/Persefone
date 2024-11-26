@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Métodos</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/painelMetodos.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="../imagens/logo.png" alt="Logo Perséfone" class="footer-logo">
+        </a>
+        <div class="usuario-name">
+            <span>Olá, <span id="nomeUsuario">nome do usuário!</span></span>
+        </div>
+    
+        <nav class="menu-user" id="userMenu">
+            <ul>
+                <li><a href="painelMetodos.html">Ver Métodos</a></li>
+                <li><a href="minhas_avaliacoes.html">Ver Minhas Avaliações</a></li>
+            </ul>
+        </nav>
+    
+        <div class="nav-icons">
+            <a href="../index.html" onclick="localStorage.removeItem('nomeUsuario')">
+                <img src="../imagens/sair.png" alt="Sair">
+            </a>
+            <a href="perfil.html">
+                <img src="../imagens/perfil.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="header-painel">
+            <h2>Métodos contraceptivos</h2>
+            <p>Escolha um método e clique para saber mais!</p>
+        </section>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar métodos..." />
+        </div>
+
+        <section id="methodsList" class="cards-container"></section>
+    </main>
+    
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/painelMetodos.js"></script>
+</body>
+</html>

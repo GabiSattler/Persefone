@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações do Método</title>
+    <link rel="stylesheet" href="../css/avaliar.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="../imagens/logo.png" alt="Logo Perséfone" class="footer-logo">
+        </a>
+        <div class="usuario-name">
+            <span>Olá, <span id="nomeUsuario">nome do usuário!</span></span>
+        </div>
+    
+        <!-- Menu Condicional - Exibido apenas para usuário comum -->
+        <nav class="menu-user" id="userMenu" style="display: none;">
+            <ul>
+                <li><a href="painelMetodos.html">Ver Métodos</a></li>
+                <li><a href="minhas_avaliacoes.html">Ver Minhas Avaliações</a></li>
+            </ul>
+        </nav>
+    
+        <div class="nav-icons">
+            <a href="../index.html" onclick="localStorage.removeItem('nomeUsuario')">
+                <img src="../imagens/sair.png" alt="Sair">
+            </a>
+            <a href="perfil.html">
+                <img src="../imagens/perfil.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Nome do método avaliado -->
+        <p id="methodType"></p>
+
+        <!-- Container para exibir as avaliações -->
+        <div class="avaliacoes-container" id="avaliacoesContainer">
+            <!-- Avaliações serão carregadas aqui dinamicamente -->
+        </div>
+    </main>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/todasAvaliacoes.js"></script>
+</body>
+</html>
