@@ -1,21 +1,15 @@
 import express from 'express';
+import router from './routes/router.js';
+import cors from 'cors'; // Importa o pacote CORS
 
-//cria um servidor com express
 const server = express();
 
-//Para respostas da API vamos usar o JSON, isso é configurado abaixo
 server.use(express.json());
-
-//Configuração padrão do express para dados de requisição
 server.use(express.urlencoded({extended:true}));
+server.use(cors());
 
-//rota de teste
-server.get('/ping',(req, res) => {
-    res.json('pong');
-})
+server.get('/ping',(req,res)=>res.json({pong:true}));
 
-//Iniciando o servidor
-server.listen(3000, () => {
-    console.log("Servidor está rodando no link: http://localhost:3000/ping")
-})
+server.use('/api', router);
 
+server.listen(3000, ()=>console.log("Servidor rodando!"));
